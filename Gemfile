@@ -44,6 +44,13 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+gem 'influxdb-rails', '~> 1.0', '>= 1.0.3'
+gem 'sidekiq', '~> 7.1', '>= 7.1.5'
+gem 'yabeda-prometheus', '~> 0.9.1'
+gem 'yabeda-puma-plugin', '~> 0.7.1'
+gem 'yabeda-rails', '~> 0.9.0'
+gem 'yabeda-sidekiq', '~> 0.12.0'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
