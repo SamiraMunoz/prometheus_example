@@ -16,10 +16,11 @@ class RoomsController < ApplicationController
 
   def edit; end
 
-  def create
+  def create # rubocop:disable Metrics/MethodLength
     @room = Room.new(room_params)
     respond_to do |format|
       if @room.save
+        UserRoom.create(room: @room, user: current_user)
         format.turbo_stream do
           render turbo_stream: turbo_stream.append('rooms', partial: 'shared/room',
                                                             locals: { room: @room })
